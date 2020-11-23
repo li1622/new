@@ -4,7 +4,7 @@
 
   <groupId>com</groupId>
   <artifactId>SSM</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+<version>1.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>SSM</name>
@@ -12,13 +12,13 @@
 
   <properties> 
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <SSM.Controller.version>0.0.1-SNAPSHOT</SSM.Controller.version>
-    <SSM.Dao.version>0.0.1-SNAPSHOT</SSM.Dao.version>
-    <SSM.Entity.version>0.0.1-SNAPSHOT</SSM.Entity.version>
-    <SSM.Mapper.version>0.0.1-SNAPSHOT</SSM.Mapper.version>
-    <SSM.Service.version>0.0.1-SNAPSHOT</SSM.Service.version>
-    <SSM.Util.version>0.0.1-SNAPSHOT</SSM.Util.version>
-    <SSM.Web.version>0.0.1-SNAPSHOT</SSM.Web.version>
+    <SSM.Controller.version>1.0-SNAPSHOT</SSM.Controller.version>
+    <SSM.Dao.version>1.0-SNAPSHOT</SSM.Dao.version>
+    <SSM.Entity.version>1.0-SNAPSHOT</SSM.Entity.version>
+    <SSM.Mapper.version>1.0-SNAPSHOT</SSM.Mapper.version>
+    <SSM.Service.version>1.0-SNAPSHOT</SSM.Service.version>
+    <SSM.Util.version>1.0-SNAPSHOT</SSM.Util.version>
+    <SSM.Web.version>1.0-SNAPSHOT</SSM.Web.version>
     <spring.version>5.0.5.RELEASE</spring.version>
     <!-- mybatis版本 -->
 		<mybatis.version>3.3.0</mybatis.version>
