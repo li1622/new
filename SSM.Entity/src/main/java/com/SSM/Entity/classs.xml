@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.SSM.Mapper.ClasssMapper">
+	 <select 	id="getClasss"  parameterType="com.SSM.Entity.Classs"  resultMap="classstMap">
+	 select * from classs 
+	 </select>
+	 
+	 
+	 <resultMap type="com.SSM.Entity.Classs" id="classstMap">
+		<id property="id" column="c_id"/>
+		<result property="classsName" column="classsName"/>
+	</resultMap>
+	
+	 
+	 
+</mapper>

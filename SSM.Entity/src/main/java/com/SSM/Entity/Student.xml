@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.SSM.Mapper.StudentMapper">
+
+	 <select 	id="getStudent"   resultMap="StudentMap">
+	 select * from student  s,classs c where s.c_id=c.id;
+	 </select>
+	 <!-- 查询一共多少条 -->
+	 <select id="getCout" resultType="java.lang.Integer">
+	 select count(*) from student
+ 	 </select>
+	 
+	 <!-- 分页查询 -->
+	 <select id="getPage" resultMap="StudentMap">
+	 select * from student s left join classs c ON s.c_id=c.id LIMIT #{start},#{pageSize}
+ 	 </select>
+	 
+	 <!-- 查询班级 -->
+	 <select id="getClasss">
+	 select *from classs
+	 </select>
+	 
+	 <!--新增  -->
+	 <insert id="add"  useGeneratedKeys="true" keyProperty="id">
+	 insert into student(name,headPath,sex,age,date,salary,c_id)  values (#{name},#{headPath},#{sex},#{age},#{date},#{salary},#{classs.id})
+	 </insert>
+	
+	<!--删除  -->
+	 <delete id="delete" parameterType="int">
+	 delete from student WHERE id=#{id}
+	 </delete>
+	 
+	 <!-- 修改回显 -->
+	 
+	 <select id="updateById"  parameterType="int" resultMap="aa">
+	 select * from student s , classs c where s.c_id=c.id and s.id=#{id}
+	 </select>
+	 <!--修改  -->
+	 <update id="update" parameterType="com.SSM.Entity.Student">
+	 update student set name=#{name}, headPath=#{headPath},sex=#{sex},age=#{age},date=#{date},salary=#{salary},c_id=#{classs.id}	 where id=#{id}
+	 </update>
+	 
+	 
+	 <resultMap type="com.SSM.Entity.Student" id="StudentMap">
+		<id property="id" column="id"/>
+		<result property="name" column="name"/>
+		<result property="headPath" column="headPath"/>
+		<result property="sex" column="sex"/>
+		<result property="age" column="age"/>
+		<result property="date" column="date"/>
+		<result property="salary" column="salary"/>
+		<association property="classs" javaType="com.SSM.Entity.Classs">
+		<id  property="id" column="id"/>
+		<result property="classsName"  column="classsName"/>
+		</association>
+	</resultMap>
+	 
+	 <resultMap type="com.SSM.Entity.Student" id="aa">
+		<id property="id" column="id"/>
+		<result property="name" column="name"/>
+		<result property="headPath" column="headPath"/>
+		<result property="sex" column="sex"/>
+		<result property="age" column="age"/>
+		<result property="date" column="date"/>
+		<result property="salary" column="salary"/>
+		<association property="classs" javaType="com.SSM.Entity.Classs">
+		<id  property="id" column="c_id"/>
+		<result property="classsName"  column="classsName"/>
+		</association>
+	</resultMap>
+	 
+	 
+</mapper>

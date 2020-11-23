@@ -1,0 +1,355 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com</groupId>
+  <artifactId>SSM</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <name>SSM</name>
+  <url>http://maven.apache.org</url>
+
+  <properties> 
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <SSM.Controller.version>0.0.1-SNAPSHOT</SSM.Controller.version>
+    <SSM.Dao.version>0.0.1-SNAPSHOT</SSM.Dao.version>
+    <SSM.Entity.version>0.0.1-SNAPSHOT</SSM.Entity.version>
+    <SSM.Mapper.version>0.0.1-SNAPSHOT</SSM.Mapper.version>
+    <SSM.Service.version>0.0.1-SNAPSHOT</SSM.Service.version>
+    <SSM.Util.version>0.0.1-SNAPSHOT</SSM.Util.version>
+    <SSM.Web.version>0.0.1-SNAPSHOT</SSM.Web.version>
+    <spring.version>5.0.5.RELEASE</spring.version>
+    <!-- mybatis版本 -->
+		<mybatis.version>3.3.0</mybatis.version>
+    <mybatis-spring.version>1.2.2</mybatis-spring.version>
+		<!-- json版本 -->
+    <jackson.version>2.9.5</jackson.version>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    
+    <dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>5.0.5.RELEASE</version>
+		</dependency>
+    
+    <dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis</artifactId>
+			<version>${mybatis.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis-spring</artifactId>
+			<version>${mybatis-spring.version}</version>
+		</dependency>
+    
+    
+    <dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.16</version>
+		</dependency>
+		<dependency>
+			<groupId>c3p0</groupId>
+			<artifactId>c3p0</artifactId>
+			<version>0.9.1.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+			<version>1.8.1</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
+    
+    
+    
+	    <dependency> 
+	<groupId>javax.servlet</groupId> 
+	<artifactId>javax.servlet-api</artifactId> 
+	<version>3.1.0</version> 
+	</dependency>
+		
+		<dependency>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>jsp-api</artifactId>
+			<version>2.2</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+			<version>1.4</version>
+		</dependency>
+	
+		<dependency>
+    <groupId>org.apache.commons</groupId>
+    <artifactId>commons-lang3</artifactId>
+    <version>3.3.2</version>
+ </dependency>
+    
+    
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.5</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			
+			<version>1.6.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.7.10</version>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.1.41</version>
+		</dependency>
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-mapper-asl</artifactId>
+			<version>1.9.13</version>
+		</dependency>
+    
+    
+    <dependency>	
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>${jackson.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>${jackson.version}</version>
+		</dependency>
+    
+       <dependency>
+    <groupId>commons-io</groupId>
+    <artifactId>commons-io</artifactId>
+    <version>2.4</version>
+</dependency>
+    
+    <dependency>
+    <groupId>antlr</groupId>
+    <artifactId>antlr</artifactId>
+    <version>2.7.7</version>
+</dependency>
+
+<dependency>
+    <groupId>com.fasterxml</groupId>
+    <artifactId>classmate</artifactId>
+    <version>1.5.0</version>
+</dependency>
+    
+<dependency>
+    <groupId>net.sourceforge.cglib</groupId>
+    <artifactId>com.springsource.net.sf.cglib</artifactId>
+    <version>2.2.0</version>
+</dependency>
+<dependency>
+    <groupId>org.aopalliance</groupId>
+    <artifactId>com.springsource.org.aopalliance</artifactId>
+    <version>1.0.0</version>
+</dependency>
+<dependency>
+    <groupId>org.aspectj</groupId>
+    <artifactId>com.springsource.org.aspectj.weaver</artifactId>
+    <version>1.6.4.RELEASE</version>
+</dependency>
+<dependency>
+    <groupId>commons-beanutils</groupId>
+    <artifactId>commons-beanutils</artifactId>
+    <version>1.9.3</version>
+</dependency>
+<dependency>
+    <groupId>commons-codec</groupId>
+    <artifactId>commons-codec</artifactId>
+    <version>1.10</version>
+</dependency>
+<dependency>
+    <groupId>commons-collections</groupId>
+    <artifactId>commons-collections</artifactId>
+    <version>3.2.2</version>
+</dependency>
+<dependency>
+    <groupId>commons-httpclient</groupId>
+    <artifactId>commons-httpclient</artifactId>
+    <version>3.1</version>
+</dependency>
+<dependency>
+    <groupId>com.github.virtuald</groupId>
+    <artifactId>curvesapi</artifactId>
+    <version>1.04</version>
+</dependency>
+    
+<dependency>
+    <groupId>com.mchange</groupId>
+    <artifactId>mchange-commons-java</artifactId>
+    <version>0.2.3.4</version>
+</dependency>
+<dependency>
+    <groupId>dom4j</groupId>
+    <artifactId>dom4j</artifactId>
+    <version>1.6</version>
+</dependency>
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-instrument</artifactId>
+    <version>5.0.5.RELEASE</version>
+</dependency>
+ 
+    <dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-jms</artifactId>
+    <version>5.0.5.RELEASE</version>
+</dependency>
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-messaging</artifactId>
+    <version>5.0.5.RELEASE</version>
+</dependency>
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-orm</artifactId>
+    <version>5.0.5.RELEASE</version>
+</dependency>
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-oxm</artifactId>
+    <version>5.0.5.RELEASE</version>
+</dependency>
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-webflux</artifactId>
+    <version>5.0.5.RELEASE</version>
+</dependency>
+ 
+    
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-websocket</artifactId>
+    <version>5.0.5.RELEASE</version>
+</dependency>
+<dependency>
+    <groupId>taglibs</groupId>
+    <artifactId>standard</artifactId>
+    <version>1.1.2</version>
+</dependency>
+<dependency>
+    <groupId>javax.validation</groupId>
+    <artifactId>validation-api</artifactId>
+    <version>2.0.1.Final</version>
+</dependency>
+    
+    
+    <dependency>
+    <groupId>org.apache.xmlbeans</groupId>
+    <artifactId>xmlbeans</artifactId>
+    <version>2.6.0</version>
+</dependency>
+    
+    <!-- https://mvnrepository.com/artifact/net.sf.json-lib/json-lib -->
+
+  </dependencies>
+  
+  
+   <!-- <distributionManagement>
+        <repository>
+            <id>releases</id>
+            <url>http://192.168.1.56:8081/repository/maven-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <url>http://192.168.1.56:8081/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement> -->
+    <repositories>
+    <!--  閰嶇疆nexus杩滅▼浠撳簱 -->
+    <repository>
+      <id>nexus</id>
+      <name>Nexus Snapshot Repository</name>
+      <url>http://192.168.1.56:8081/repository/maven-public/</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
+
+
+  <!-- 配置远程发布到私服，mvn deploy -->
+  <distributionManagement>
+    <repository>
+      <id>releases</id>
+      <name>Nexus Release Repository</name>
+      <url>http://192.168.1.56:8081/repository/maven-releases/</url>
+    </repository>
+    <snapshotRepository>
+      <id>snapshots</id>
+      <name>Nexus Snapshot Repository</name>
+      <url>http://192.168.1.56:8081/repository/maven-snapshots/</url>
+    </snapshotRepository>
+  </distributionManagement>
+  
+  <modules>
+  <module>../SSM.Controller/pom.xml</module>
+   <module>../SSM.Dao/pom.xml</module>
+    <module>../SSM.Entity/pom.xml</module>
+     <module>../SSM.Service/pom.xml</module>
+      <module>../SSM.Web/pom.xml</module>
+       <module>../SSM.Mapper/pom.xml</module>
+        <module>../SSM.Util/pom.xml</module>
+  </modules>
+</project>
