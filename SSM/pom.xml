@@ -324,14 +324,6 @@
     </snapshotRepository>
   </distributionManagement>
 	
-	   <resources>
-        <resource>
-            <directory>${basedir}/src/main/java</directory>
-            <includes>
-                <include>**/*.xml</include>
-            </includes>
-        </resource>
-    </resources>
   
   <modules>
   <module>../SSM.Controller/pom.xml</module>
